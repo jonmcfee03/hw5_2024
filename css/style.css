@@ -97,3 +97,38 @@ body {
         padding-top: 100px;
     }
 }
+
+@media print {
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+    nav {
+        width: 100%;
+    }
+    .nav_links {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: end;
+    }
+    .card {
+        flex: 1 1 325px;
+        border: 2px solid #45ADDD;
+    }
+    #gallery, .gallery {
+        display: none;
+    }
+
+    .pricing li:nth-of-type(2)::after {
+        content: "\1F44D";
+    }
+    footer {
+        page-break-before: always;
+    }
+}
