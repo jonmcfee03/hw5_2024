@@ -2,6 +2,7 @@
     width: 475px;
 }
 
+/* enables animation if user does not have preference */
 @media (prefers-reduced-motion: no-preference) {
     #logo {
         animation-name: logo-movement;
@@ -9,6 +10,7 @@
     }
 }
 
+/* logo animation */
 @keyframes logo-movement {
     from {
         width: 25px;
@@ -27,11 +29,13 @@ header {
     align-items: center;
 }
 
+/* makes navigation links a flex blox */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
+/* prevents links from turning purple when visited */
 .nav_item > a:link, .nav_item > a:visited {
     color: blue;
 }
@@ -50,6 +54,7 @@ body {
     justify-content: center;
 }
 
+/* selects all headers within card elements */
 .card > header {
     background: #288088;
     border: 2px solid #45ADAD;
@@ -78,6 +83,7 @@ body {
     width: 300px;
 }
 
+/* BEGIN 900PX MEDIA QUERY */
 @media screen and (min-width: 900px) {
     header, .nav_links {
         flex-direction: row;
@@ -97,7 +103,9 @@ body {
         padding-top: 100px;
     }
 }
+/* END 900px MEDIA QUERY */
 
+/* BEGIN PRINT SCREEN MEDIA QUERY */
 @media print {
     body {
         font-family: Arial, Helvetica;
@@ -132,3 +140,4 @@ body {
         page-break-before: always;
     }
 }
+/* END PRINT SCREEN MEDIA QUERY */
